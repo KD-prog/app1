@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { LayoutComponent } from './core/layout/layout.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CoreModule } from "./core/core.module";
+import { MaterialModule } from "./material/material.module";
 
 @NgModule({
   declarations: [
@@ -14,10 +17,13 @@ import { LayoutComponent } from './core/layout/layout.component';
     FooterComponent,
     LayoutComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        CoreModule,
+        MaterialModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
